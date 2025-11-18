@@ -1,0 +1,1 @@
+CREATE USER  'SGBDR'@'localhost' IDENTIFIED BY 'SGBDRPassword';
