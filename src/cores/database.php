@@ -4,7 +4,7 @@ namespace src\cores ;
 
 use \PDO ;
 use \PDOException ;
-
+use MongoDB\Client ;
 class Database 
 {
     private $host ;
@@ -15,6 +15,10 @@ class Database
     private static $instance = null;
     private $pdo;
 
+    private $mongoDbClient ; 
+    private $hostMongoDb ; 
+    private $databaseMongoDb ; 
+
     private function __construct() {
         $this->host = $_ENV['DB_HOST'];
         $this->db_name = $_ENV['DB_NAME'];
@@ -22,6 +26,10 @@ class Database
         $this->password = $_ENV['DB_PASSWORD'];
         $this->pdo = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        $this->hostMongoDb = $_ENV['MONGO_URI'];
+        $this->databaseMongoDb = $_ENV['MONGO_DB'];
+        $this->mongoDbClient = new Client($this->hostMongoDb);
     }
 
     public static function getInstance() {
@@ -31,8 +39,13 @@ class Database
         
         return self::$instance;
     }
+  
 
-    public function getConnection() {
+    public function getConnectionPdo() {
         return $this->pdo;
+    }
+           
+    public function getConnectionMongoDb() {
+        return $this->mongoDbClient->selectDatabase($this->databaseMongoDb);
     }
 }

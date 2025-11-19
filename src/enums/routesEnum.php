@@ -8,6 +8,7 @@ class RoutesEnum {
         '/' => ['controller' => 'HomeController', 'action' => 'index', 'methods' => ['GET']],
         '/events' => ['controller' => 'EventsController', 'action' => 'index', 'methods' => ['GET']],
         '/events/register' => ['controller' => 'EventsController', 'action' => 'registerToEvents', 'methods' => ['GET']],
+        '/events/registerSubmit' => ['controller' => 'EventsController', 'action' => 'registerSubmit', 'methods' => ['POST']],
         '/errors/{errorCode}' => ['controller' => 'ErrorsController', 'action' => 'index', 'methods' => ['GET'] ],
     ];
     

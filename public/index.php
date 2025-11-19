@@ -13,11 +13,12 @@ $dotenv->load();
 try {
     if ($_SERVER['REQUEST_URI'] !== '/errors/1045') {
         $db = Database::getInstance();
-        $pdo = $db->getConnection();
+        $pdo = $db->getConnectionPdo();
+        // $mongoDb = $db->getConnectionMongoDb();
     }
     Router::dispatch();
-} catch (PDOException $e) {
-        header('Location: /errors/1045');
-        exit;
+} catch (PDOException $e) {    
+    header('Location: /errors/1045');
+    exit;
     
 }

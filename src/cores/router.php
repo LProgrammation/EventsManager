@@ -10,7 +10,6 @@ class Router {
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $routesEnum = new Routes();
         $routes = $routesEnum->getRoutes();
-
         if (in_array($uri, array_keys($routes))) {
             $route = $routes[$uri];
             if (in_array($method, $route['methods'])) {
@@ -60,7 +59,7 @@ class Router {
             }
         }
 
-        self::redirectToError(404);
+        // self::redirectToError(404);
     }
 
     private static function redirectToError(int $code): void {
