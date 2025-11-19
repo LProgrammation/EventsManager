@@ -2,9 +2,10 @@
 
 namespace src\enums ; 
 
-class RoutesEnum {
+class RoutesEnum {  
 
     private $routes = [
+        '/' => ['controller' => 'HomeController', 'action' => 'index', 'methods' => ['GET']],
         '/events' => ['controller' => 'EventsController', 'action' => 'index', 'methods' => ['GET']],
         '/events/register' => ['controller' => 'EventsController', 'action' => 'registerToEvents', 'methods' => ['GET']],
         '/errors/{errorCode}' => ['controller' => 'ErrorsController', 'action' => 'index', 'methods' => ['GET'] ],

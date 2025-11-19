@@ -1,0 +1,1 @@
+<h1>Bienvenue sur le site EventsManager</h1>
