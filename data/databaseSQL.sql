@@ -5,8 +5,8 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE DATABASE IF NOT EXISTS `Event`;
-USE `Event`;
+CREATE DATABASE IF NOT EXISTS `events_manager`;
+USE `events_manager`;
 
 CREATE TABLE `evenements` (
   `id` int(11) NOT NULL,
@@ -44,6 +44,6 @@ ALTER TABLE `inscriptions`
 
 COMMIT;
 
-CREATE USER IF NOT EXISTS 'event_user'@'localhost' IDENTIFIED BY 'motdepasseEvent123.';
-GRANT ALL PRIVILEGES ON Event.* TO 'event_user'@'localhost';
+CREATE USER IF NOT EXISTS 'SGBDR'@'localhost' IDENTIFIED BY 'SGBDRPassword123!';
+GRANT SELECT, EXECUTE ON `events_manager`.* TO 'SGBDR'@'localhost';
 FLUSH PRIVILEGES;
