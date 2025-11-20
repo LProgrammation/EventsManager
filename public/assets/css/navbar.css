@@ -1,0 +1,18 @@
+nav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #252525;
+    z-index: 1;
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 100%;
+    }
+}

@@ -1,5 +1,5 @@
-<h1>Register to Events</h1>
-<form id="registerForm" method="POST" action="/events/registerSubmit">
+<form id="unregisterForm" method="POST" action="/events/unregisterSubmit">
+    <h1>Unregister from Events</h1>
     <label for="event">Choisissez un événement :</label>
     <select id="event" name="event_id" required>
         <?php foreach ($renderData['data']['events'] as $event): ?>
@@ -22,5 +22,5 @@
     <br><br>
 
 
-    <button type="submit">S'inscrire</button>
+    <button type="submit">Se désinscrire</button>
 </form>

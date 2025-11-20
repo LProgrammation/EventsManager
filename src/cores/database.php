@@ -1,51 +1,40 @@
 <?php 
 
-namespace src\cores ; 
+namespace src\cores;
 
-use \PDO ;
-use \PDOException ;
-use MongoDB\Client ;
-class Database 
-{
-    private $host ;
-    private $db_name  ;
-    private $username   ;
-    private $password ;
+class Database {
+    private $dbName;
+    private $type;
+    private $connection;
 
-    private static $instance = null;
-    private $pdo;
+    public function __construct($dbName, $type = 'mysql') {
+        $this->dbName = $dbName;
+        $this->type = strtolower($type);
 
-    private $mongoDbClient ; 
-    private $hostMongoDb ; 
-    private $databaseMongoDb ; 
-
-    private function __construct() {
-        $this->host = $_ENV['DB_HOST'];
-        $this->db_name = $_ENV['DB_NAME'];
-        $this->username = $_ENV['DB_USER'];
-        $this->password = $_ENV['DB_PASSWORD'];
-        $this->pdo = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        $this->hostMongoDb = $_ENV['MONGO_URI'];
-        $this->databaseMongoDb = $_ENV['MONGO_DB'];
-        $this->mongoDbClient = new Client($this->hostMongoDb);
-    }
-
-    public static function getInstance() {
-        if (self::$instance === null) {
-            self::$instance = new Database();
+        if ($this->type === 'mysql' || $this->type === 'mariadb') {
+            $host = $_ENV['DB_HOST'] ?? 'localhost';
+            $user = $_ENV['DB_USER'] ?? 'root';
+            $password = $_ENV['DB_PASSWORD'] ?? '';
+            $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8mb4";
+            $this->connection = new \PDO($dsn, $user, $password);
+        } elseif ($this->type === 'mongodb') {
+            $host = $_ENV['MONGO_HOST'] ?? 'localhost';
+            $port = $_ENV['MONGO_PORT'] ?? '27017';
+            $user = $_ENV['MONGO_USER'] ?? '';
+            $password = $_ENV['MONGO_PASSWORD'] ?? '';
+            $uri = "mongodb://";
+            if ($user && $password) {
+                $uri .= "{$user}:{$password}@";
+            }
+            $uri .= "{$host}:{$port}";
+            $client = new \MongoDB\Client($uri);
+            $this->connection = $client->selectDatabase($dbName);
+        } else {
+            throw new \Exception("Unsupported database type: {$type}");
         }
-        
-        return self::$instance;
     }
-  
 
-    public function getConnectionPdo() {
-        return $this->pdo;
-    }
-           
-    public function getConnectionMongoDb() {
-        return $this->mongoDbClient->selectDatabase($this->databaseMongoDb);
+    public function getConnection() {
+        return $this->connection;
     }
 }

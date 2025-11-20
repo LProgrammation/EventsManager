@@ -1,0 +1,14 @@
+.mainContent{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(74, 74, 74);
+    height: calc(100vh - 50px);
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
+    padding: 1vw;
+    align-items: center;
+}

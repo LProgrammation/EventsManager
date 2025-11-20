@@ -1,5 +1,5 @@
-<h1>Modifier la date d'un événement</h1>
-<form id="editEventForm" method="POST" action="/events/updateEventSubmit">
+<form id="editEventDateForm" method="POST" action="/events/updateEventSubmit">
+    <h1>Modifier la date d'un événement</h1>
     <label for="event">Choisissez un événement :</label>
     <select id="event" name="event_id" required>
         <?php foreach ($renderData['data']['events'] as $event): ?>
@@ -11,8 +11,13 @@
 
     <br><br>
 
-    <label for="new_date">Nouvelle date :</label>
-    <input type="date" id="new_date" name="new_date" required>
+    <label for="new_start_date">Nouvelle date de début :</label>
+    <input type="date" id="new_start_date" name="new_start_date" required>
+
+    <br><br>
+
+    <label for="new_end_date">Nouvelle date de fin :</label>
+    <input type="date" id="new_end_date" name="new_end_date" required>
 
     <br><br>
 

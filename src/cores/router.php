@@ -5,7 +5,7 @@ namespace src\cores;
 use src\enums\RoutesEnum as Routes; 
 
 class Router {
-    public static function dispatch() {
+    public static function dispatch($Database = null) {
         $method = $_SERVER['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $routesEnum = new Routes();
@@ -16,7 +16,7 @@ class Router {
                 $controllerName = '\\src\\controllers\\' . $route['controller'];
                 $actionName = $route['action'];
                 if (class_exists($controllerName)) {
-                    $controller = new $controllerName();
+                    $controller = new $controllerName($Database);
                     if (method_exists($controller, $actionName)) {
                         return call_user_func_array([$controller, $actionName], []);
                     }
@@ -51,7 +51,7 @@ class Router {
                 $controllerName = '\\src\\controllers\\' . $route['controller'];
                 $actionName = $route['action'];
                 if (class_exists($controllerName)) {
-                    $controller = new $controllerName();
+                    $controller = new $controllerName($Database);
                     if (method_exists($controller, $actionName)) {
                         return call_user_func_array([$controller, $actionName], $params);
                     }
@@ -59,7 +59,7 @@ class Router {
             }
         }
 
-        // self::redirectToError(404);
+        self::redirectToError(404);
     }
 
     private static function redirectToError(int $code): void {

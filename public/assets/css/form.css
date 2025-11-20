@@ -1,0 +1,26 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40vw;
+    height: 80vh;
+    padding: 5vh;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+  
+    input, select{
+        height: 5vh;
+        width: 100%;
+        font-size: 1rem;
+    }
+    button{
+        width: 20vw;
+        height: 5vh;
+        font-size: 1rem;
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+}
