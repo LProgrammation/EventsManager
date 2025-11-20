@@ -25,4 +25,16 @@ class EventsController extends AbstractController {
             $_POST['last_name']
         );
     }
+    public function editEventDate(){
+    $events = $this->eventsService->getAllEvents();
+    $this->render('events/editDate', ['title' => 'Modifier la date', 'events' => $events]);
+}
+
+public function updateEventSubmit(){
+    $this->eventsService->updateEventDate(
+        $_POST['event_id'],
+        $_POST['new_date']
+    );
+}
+
 }

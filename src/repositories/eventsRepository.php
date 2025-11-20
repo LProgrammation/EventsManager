@@ -32,5 +32,11 @@ class EventsRepository {
         $stmt->execute();
         
     }
- 
+ public function updateEventDate($event_id, $new_date){
+    $stmt = $this->pdo->prepare("CALL updateEventDate(:event_id, :new_date)");
+    $stmt->bindParam(':event_id', $event_id, \PDO::PARAM_INT);
+    $stmt->bindParam(':new_date', $new_date, \PDO::PARAM_STR);
+    $stmt->execute();
+}
+
 }
