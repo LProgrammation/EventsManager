@@ -1,552 +1,57 @@
 [
   {
-    "event": "Mon event 1",
+    "event": "LiveTicket Conference 2024",
     "start": "2024-10-05 16:00:00",
     "end": "2024-10-05 20:00:00",
     "max": 10,
-    "where": "1 rue truc - 75010 Machin",
+    "where": "15 rue de la Tech - 75001 Paris",
     "attendees": [
-      { "fn": "John", "ln": "Doe", "when": "2023-03-12" },
-      { "fn": "Jane", "ln": "Dae", "when": "2023-03-14" }
+      { "fn": "Marie", "ln": "Dupont", "when": "2024-09-12" },
+      { "fn": "Pierre", "ln": "Martin", "when": "2024-09-15" }
     ]
   },
   {
-    "event": "Mon event 2",
+    "event": "LiveTicket Music Festival",
     "start": "2024-11-01 18:00:00",
-    "end": "2024-11-01 22:00:00",
+    "end": "2024-11-01 23:00:00",
     "max": 20,
-    "where": "2 avenue bidule - 75011 Paris",
+    "where": "42 avenue des Arts - 75008 Paris",
     "attendees": [
-      { "fn": "Alice", "ln": "Smith", "when": "2023-04-01" },
-      { "fn": "Bob", "ln": "Brown", "when": "2023-04-02" }
+      { "fn": "Sophie", "ln": "Bernard", "when": "2024-10-05" },
+      { "fn": "Lucas", "ln": "Petit", "when": "2024-10-08" }
     ]
   },
   {
-    "event": "Mon event 3",
+    "event": "LiveTicket Sport Event",
     "start": "2024-12-10 15:00:00",
     "end": "2024-12-10 19:00:00",
     "max": 15,
-    "where": "3 boulevard truc - 75012 Paris",
+    "where": "8 boulevard du Stade - 75013 Paris",
     "attendees": [
-      { "fn": "Charlie", "ln": "Johnson", "when": "2023-05-03" },
-      { "fn": "David", "ln": "Williams", "when": "2023-05-04" }
+      { "fn": "Thomas", "ln": "Moreau", "when": "2024-11-20" },
+      { "fn": "Emma", "ln": "Laurent", "when": "2024-11-22" }
     ]
   },
   {
-    "event": "Mon event 4",
-    "start": "2025-01-15 14:00:00",
-    "end": "2025-01-15 18:00:00",
+    "event": "LiveTicket Theater Night",
+    "start": "2025-01-15 19:30:00",
+    "end": "2025-01-15 22:30:00",
     "max": 25,
-    "where": "4 rue machin - 75013 Paris",
+    "where": "33 rue de la Comédie - 75009 Paris",
     "attendees": [
-      { "fn": "Eva", "ln": "Green", "when": "2023-05-10" },
-      { "fn": "Frank", "ln": "Black", "when": "2023-05-11" }
+      { "fn": "Julie", "ln": "Lefevre", "when": "2024-12-10" },
+      { "fn": "Alexandre", "ln": "Roux", "when": "2024-12-12" }
     ]
   },
   {
-    "event": "Mon event 5",
-    "start": "2025-02-20 17:00:00",
-    "end": "2025-02-20 21:00:00",
+    "event": "LiveTicket Tech Summit",
+    "start": "2025-02-20 09:00:00",
+    "end": "2025-02-20 18:00:00",
     "max": 30,
-    "where": "5 avenue exemple - 75014 Paris",
+    "where": "91 avenue de l'Innovation - 75015 Paris",
     "attendees": [
-      { "fn": "Grace", "ln": "Lee", "when": "2023-06-10" },
-      { "fn": "Hank", "ln": "Miller", "when": "2023-06-11" }
-    ]
-  },
-  {
-    "event": "Mon event 6",
-    "start": "2025-03-10 16:00:00",
-    "end": "2025-03-10 20:00:00",
-    "max": 10,
-    "where": "6 rue truc - 75015 Paris",
-    "attendees": [
-      { "fn": "Ivy", "ln": "Garcia", "when": "2023-07-01" },
-      { "fn": "Jack", "ln": "Martinez", "when": "2023-07-02" }
-    ]
-  },
-  {
-    "event": "Mon event 7",
-    "start": "2025-04-05 18:00:00",
-    "end": "2025-04-05 22:00:00",
-    "max": 20,
-    "where": "7 avenue bidule - 75016 Paris",
-    "attendees": [
-      { "fn": "Karen", "ln": "Hernandez", "when": "2023-08-01" },
-      { "fn": "Leo", "ln": "Lopez", "when": "2023-08-02" }
-    ]
-  },
-  {
-    "event": "Mon event 8",
-    "start": "2025-05-10 15:00:00",
-    "end": "2025-05-10 19:00:00",
-    "max": 15,
-    "where": "8 boulevard truc - 75017 Paris",
-    "attendees": [
-      { "fn": "Mia", "ln": "Gonzalez", "when": "2023-09-03" },
-      { "fn": "Noah", "ln": "Wilson", "when": "2023-09-04" }
-    ]
-  },
-  {
-    "event": "Mon event 9",
-    "start": "2025-06-15 14:00:00",
-    "end": "2025-06-15 18:00:00",
-    "max": 25,
-    "where": "9 rue machin - 75018 Paris",
-    "attendees": [
-      { "fn": "Olivia", "ln": "Anderson", "when": "2023-09-10" },
-      { "fn": "Paul", "ln": "Thomas", "when": "2023-09-11" }
-    ]
-  },
-  {
-    "event": "Mon event 10",
-    "start": "2025-07-20 17:00:00",
-    "end": "2025-07-20 21:00:00",
-    "max": 30,
-    "where": "10 avenue exemple - 75019 Paris",
-    "attendees": [
-      { "fn": "Quinn", "ln": "Taylor", "when": "2023-10-01" },
-      { "fn": "Riley", "ln": "Clark", "when": "2023-10-02" }
-    ]
-  },
-  {
-    "event": "Mon event 11",
-    "start": "2025-08-10 16:00:00",
-    "end": "2025-08-10 20:00:00",
-    "max": 10,
-    "where": "11 rue truc - 75020 Paris",
-    "attendees": [
-      { "fn": "Sophie", "ln": "Rodriguez", "when": "2023-10-10" },
-      { "fn": "Tom", "ln": "Lewis", "when": "2023-10-11" }
-    ]
-  },
-  {
-    "event": "Mon event 12",
-    "start": "2025-09-05 18:00:00",
-    "end": "2025-09-05 22:00:00",
-    "max": 20,
-    "where": "12 avenue bidule - 75021 Paris",
-    "attendees": [
-      { "fn": "Uma", "ln": "Walker", "when": "2023-11-01" },
-      { "fn": "Vera", "ln": "Hall", "when": "2023-11-02" }
-    ]
-  },
-  {
-    "event": "Mon event 13",
-    "start": "2025-10-10 15:00:00",
-    "end": "2025-10-10 19:00:00",
-    "max": 15,
-    "where": "13 boulevard truc - 75022 Paris",
-    "attendees": [
-      { "fn": "Will", "ln": "Allen", "when": "2023-11-10" },
-      { "fn": "Xena", "ln": "Young", "when": "2023-11-11" }
-    ]
-  },
-  {
-    "event": "Mon event 14",
-    "start": "2025-11-05 14:00:00",
-    "end": "2025-11-05 18:00:00",
-    "max": 25,
-    "where": "14 rue machin - 75023 Paris",
-    "attendees": [
-      { "fn": "Yara", "ln": "King", "when": "2023-12-01" },
-      { "fn": "Zane", "ln": "Mitchell", "when": "2023-12-02" }
-    ]
-  },
-  {
-    "event": "Mon event 15",
-    "start": "2025-12-10 17:00:00",
-    "end": "2025-12-10 21:00:00",
-    "max": 30,
-    "where": "15 avenue exemple - 75024 Paris",
-    "attendees": [
-      { "fn": "Amy", "ln": "Perez", "when": "2023-12-10" },
-      { "fn": "Bob", "ln": "Brown", "when": "2023-12-11" }
-    ]
-  },
-  {
-    "event": "Mon event 16",
-    "start": "2026-01-15 16:00:00",
-    "end": "2026-01-15 20:00:00",
-    "max": 10,
-    "where": "16 rue truc - 75025 Paris",
-    "attendees": [
-      { "fn": "John", "ln": "Doe", "when": "2024-01-12" },
-      { "fn": "Jane", "ln": "Dae", "when": "2024-01-14" }
-    ]
-  },
-  {
-    "event": "Mon event 17",
-    "start": "2026-02-01 18:00:00",
-    "end": "2026-02-01 22:00:00",
-    "max": 20,
-    "where": "17 avenue bidule - 75026 Paris",
-    "attendees": [
-      { "fn": "Alice", "ln": "Smith", "when": "2024-02-01" },
-      { "fn": "Bob", "ln": "Brown", "when": "2024-02-02" }
-    ]
-  },
-  {
-    "event": "Mon event 18",
-    "start": "2026-03-10 15:00:00",
-    "end": "2026-03-10 19:00:00",
-    "max": 15,
-    "where": "18 boulevard truc - 75027 Paris",
-    "attendees": [
-      { "fn": "Charlie", "ln": "Johnson", "when": "2024-03-03" },
-      { "fn": "David", "ln": "Williams", "when": "2024-03-04" }
-    ]
-  },
-  {
-    "event": "Mon event 19",
-    "start": "2026-04-05 14:00:00",
-    "end": "2026-04-05 18:00:00",
-    "max": 25,
-    "where": "19 rue machin - 75028 Paris",
-    "attendees": [
-      { "fn": "Eva", "ln": "Green", "when": "2024-04-10" },
-      { "fn": "Frank", "ln": "Black", "when": "2024-04-11" }
-    ]
-  },
-  {
-    "event": "Mon event 20",
-    "start": "2026-05-10 17:00:00",
-    "end": "2026-05-10 21:00:00",
-    "max": 30,
-    "where": "20 avenue exemple - 75029 Paris",
-    "attendees": [
-      { "fn": "Grace", "ln": "Lee", "when": "2024-05-10" },
-      { "fn": "Hank", "ln": "Miller", "when": "2024-05-11" }
-    ]
-  },
-  {
-    "event": "Mon event 21",
-    "start": "2026-06-15 16:00:00",
-    "end": "2026-06-15 20:00:00",
-    "max": 10,
-    "where": "21 rue truc - 75030 Paris",
-    "attendees": [
-      { "fn": "Ivy", "ln": "Garcia", "when": "2024-06-01" },
-      { "fn": "Jack", "ln": "Martinez", "when": "2024-06-02" }
-    ]
-  },
-  {
-    "event": "Mon event 22",
-    "start": "2026-07-05 18:00:00",
-    "end": "2026-07-05 22:00:00",
-    "max": 20,
-    "where": "22 avenue bidule - 75031 Paris",
-    "attendees": [
-      { "fn": "Karen", "ln": "Hernandez", "when": "2024-07-01" },
-      { "fn": "Leo", "ln": "Lopez", "when": "2024-07-02" }
-    ]
-  },
-  {
-    "event": "Mon event 23",
-    "start": "2026-08-10 15:00:00",
-    "end": "2026-08-10 19:00:00",
-    "max": 15,
-    "where": "23 boulevard truc - 75032 Paris",
-    "attendees": [
-      { "fn": "Mia", "ln": "Gonzalez", "when": "2024-08-03" },
-      { "fn": "Noah", "ln": "Wilson", "when": "2024-08-04" }
-    ]
-  },
-  {
-    "event": "Mon event 24",
-    "start": "2026-09-15 14:00:00",
-    "end": "2026-09-15 18:00:00",
-    "max": 25,
-    "where": "24 rue machin - 75033 Paris",
-    "attendees": [
-      { "fn": "Olivia", "ln": "Anderson", "when": "2024-09-10" },
-      { "fn": "Paul", "ln": "Thomas", "when": "2024-09-11" }
-    ]
-  },
-  {
-    "event": "Mon event 25",
-    "start": "2026-10-20 17:00:00",
-    "end": "2026-10-20 21:00:00",
-    "max": 30,
-    "where": "25 avenue exemple - 75034 Paris",
-    "attendees": [
-      { "fn": "Quinn", "ln": "Taylor", "when": "2024-10-01" },
-      { "fn": "Riley", "ln": "Clark", "when": "2024-10-02" }
-    ]
-  },
-  {
-    "event": "Mon event 26",
-    "start": "2026-11-10 16:00:00",
-    "end": "2026-11-10 20:00:00",
-    "max": 10,
-    "where": "26 rue truc - 75035 Paris",
-    "attendees": [
-      { "fn": "Sophie", "ln": "Rodriguez", "when": "2024-10-10" },
-      { "fn": "Tom", "ln": "Lewis", "when": "2024-10-11" }
-    ]
-  },
-  {
-    "event": "Mon event 27",
-    "start": "2026-12-05 18:00:00",
-    "end": "2026-12-05 22:00:00",
-    "max": 20,
-    "where": "27 avenue bidule - 75036 Paris",
-    "attendees": [
-      { "fn": "Uma", "ln": "Walker", "when": "2024-11-01" },
-      { "fn": "Vera", "ln": "Hall", "when": "2024-11-02" }
-    ]
-  },
-  {
-    "event": "Mon event 28",
-    "start": "2027-01-10 15:00:00",
-    "end": "2027-01-10 19:00:00",
-    "max": 15,
-    "where": "28 boulevard truc - 75037 Paris",
-    "attendees": [
-      { "fn": "Will", "ln": "Allen", "when": "2024-11-10" },
-      { "fn": "Xena", "ln": "Young", "when": "2024-11-11" }
-    ]
-  },
-  {
-    "event": "Mon event 29",
-    "start": "2027-02-05 14:00:00",
-    "end": "2027-02-05 18:00:00",
-    "max": 25,
-    "where": "29 rue machin - 75038 Paris",
-    "attendees": [
-      { "fn": "Yara", "ln": "King", "when": "2024-12-01" },
-      { "fn": "Zane", "ln": "Mitchell", "when": "2024-12-02" }
-    ]
-  },
-  {
-    "event": "Mon event 30",
-    "start": "2027-03-10 17:00:00",
-    "end": "2027-03-10 21:00:00",
-    "max": 30,
-    "where": "30 avenue exemple - 75039 Paris",
-    "attendees": [
-      { "fn": "Amy", "ln": "Perez", "when": "2024-12-10" },
-      { "fn": "Bob", "ln": "Brown", "when": "2024-12-11" }
-    ]
-  },
-  {
-    "event": "Mon event 31",
-    "start": "2027-04-15 16:00:00",
-    "end": "2027-04-15 20:00:00",
-    "max": 10,
-    "where": "31 rue truc - 75040 Paris",
-    "attendees": [
-      { "fn": "John", "ln": "Doe", "when": "2025-01-12" },
-      { "fn": "Jane", "ln": "Dae", "when": "2025-01-14" }
-    ]
-  },
-  {
-    "event": "Mon event 32",
-    "start": "2027-05-01 18:00:00",
-    "end": "2027-05-01 22:00:00",
-    "max": 20,
-    "where": "32 avenue bidule - 75041 Paris",
-    "attendees": [
-      { "fn": "Alice", "ln": "Smith", "when": "2025-02-01" },
-      { "fn": "Bob", "ln": "Brown", "when": "2025-02-02" }
-    ]
-  },
-  {
-    "event": "Mon event 33",
-    "start": "2027-06-10 15:00:00",
-    "end": "2027-06-10 19:00:00",
-    "max": 15,
-    "where": "33 boulevard truc - 75042 Paris",
-    "attendees": [
-      { "fn": "Charlie", "ln": "Johnson", "when": "2025-03-03" },
-      { "fn": "David", "ln": "Williams", "when": "2025-03-04" }
-    ]
-  },
-  {
-    "event": "Mon event 34",
-    "start": "2027-07-05 14:00:00",
-    "end": "2027-07-05 18:00:00",
-    "max": 25,
-    "where": "34 rue machin - 75043 Paris",
-    "attendees": [
-      { "fn": "Eva", "ln": "Green", "when": "2025-04-10" },
-      { "fn": "Frank", "ln": "Black", "when": "2025-04-11" }
-    ]
-  },
-  {
-    "event": "Mon event 35",
-    "start": "2027-08-10 17:00:00",
-    "end": "2027-08-10 21:00:00",
-    "max": 30,
-    "where": "35 avenue exemple - 75044 Paris",
-    "attendees": [
-      { "fn": "Grace", "ln": "Lee", "when": "2025-05-10" },
-      { "fn": "Hank", "ln": "Miller", "when": "2025-05-11" }
-    ]
-  },
-  {
-    "event": "Mon event 36",
-    "start": "2027-09-15 16:00:00",
-    "end": "2027-09-15 20:00:00",
-    "max": 10,
-    "where": "36 rue truc - 75045 Paris",
-    "attendees": [
-      { "fn": "Ivy", "ln": "Garcia", "when": "2025-06-01" },
-      { "fn": "Jack", "ln": "Martinez", "when": "2025-06-02" }
-    ]
-  },
-  {
-    "event": "Mon event 37",
-    "start": "2027-10-05 18:00:00",
-    "end": "2027-10-05 22:00:00",
-    "max": 20,
-    "where": "37 avenue bidule - 75046 Paris",
-    "attendees": [
-      { "fn": "Karen", "ln": "Hernandez", "when": "2025-07-01" },
-      { "fn": "Leo", "ln": "Lopez", "when": "2025-07-02" }
-    ]
-  },
-  {
-    "event": "Mon event 38",
-    "start": "2027-11-10 15:00:00",
-    "end": "2027-11-10 19:00:00",
-    "max": 15,
-    "where": "38 boulevard truc - 75047 Paris",
-    "attendees": [
-      { "fn": "Mia", "ln": "Gonzalez", "when": "2025-08-03" },
-      { "fn": "Noah", "ln": "Wilson", "when": "2025-08-04" }
-    ]
-  },
-  {
-    "event": "Mon event 39",
-    "start": "2027-12-05 14:00:00",
-    "end": "2027-12-05 18:00:00",
-    "max": 25,
-    "where": "39 rue machin - 75048 Paris",
-    "attendees": [
-      { "fn": "Olivia", "ln": "Anderson", "when": "2025-09-10" },
-      { "fn": "Paul", "ln": "Thomas", "when": "2025-09-11" }
-    ]
-  },
-  {
-    "event": "Mon event 40",
-    "start": "2028-01-10 17:00:00",
-    "end": "2028-01-10 21:00:00",
-    "max": 30,
-    "where": "40 avenue exemple - 75049 Paris",
-    "attendees": [
-      { "fn": "Quinn", "ln": "Taylor", "when": "2025-10-01" },
-      { "fn": "Riley", "ln": "Clark", "when": "2025-10-02" }
-    ]
-  },
-  {
-    "event": "Mon event 41",
-    "start": "2028-02-05 16:00:00",
-    "end": "2028-02-05 20:00:00",
-    "max": 10,
-    "where": "41 rue truc - 75050 Paris",
-    "attendees": [
-      { "fn": "Sophie", "ln": "Rodriguez", "when": "2025-10-10" },
-      { "fn": "Tom", "ln": "Lewis", "when": "2025-10-11" }
-    ]
-  },
-  {
-    "event": "Mon event 42",
-    "start": "2028-03-01 18:00:00",
-    "end": "2028-03-01 22:00:00",
-    "max": 20,
-    "where": "42 avenue bidule - 75051 Paris",
-    "attendees": [
-      { "fn": "Uma", "ln": "Walker", "when": "2025-11-01" },
-      { "fn": "Vera", "ln": "Hall", "when": "2025-11-02" }
-    ]
-  },
-  {
-    "event": "Mon event 43",
-    "start": "2028-04-10 15:00:00",
-    "end": "2028-04-10 19:00:00",
-    "max": 15,
-    "where": "43 boulevard truc - 75052 Paris",
-    "attendees": [
-      { "fn": "Will", "ln": "Allen", "when": "2025-11-10" },
-      { "fn": "Xena", "ln": "Young", "when": "2025-11-11" }
-    ]
-  },
-  {
-    "event": "Mon event 44",
-    "start": "2028-05-05 14:00:00",
-    "end": "2028-05-05 18:00:00",
-    "max": 25,
-    "where": "44 rue machin - 75053 Paris",
-    "attendees": [
-      { "fn": "Yara", "ln": "King", "when": "2025-12-01" },
-      { "fn": "Zane", "ln": "Mitchell", "when": "2025-12-02" }
-    ]
-  },
-  {
-    "event": "Mon event 45",
-    "start": "2028-06-10 17:00:00",
-    "end": "2028-06-10 21:00:00",
-    "max": 30,
-    "where": "45 avenue exemple - 75054 Paris",
-    "attendees": [
-      { "fn": "Amy", "ln": "Perez", "when": "2025-12-10" },
-      { "fn": "Bob", "ln": "Brown", "when": "2025-12-11" }
-    ]
-  },
-  {
-    "event": "Mon event 46",
-    "start": "2028-07-15 16:00:00",
-    "end": "2028-07-15 20:00:00",
-    "max": 10,
-    "where": "46 rue truc - 75055 Paris",
-    "attendees": [
-      { "fn": "John", "ln": "Doe", "when": "2026-01-12" },
-      { "fn": "Jane", "ln": "Dae", "when": "2026-01-14" }
-    ]
-  },
-  {
-    "event": "Mon event 47",
-    "start": "2028-08-01 18:00:00",
-    "end": "2028-08-01 22:00:00",
-    "max": 20,
-    "where": "47 avenue bidule - 75056 Paris",
-    "attendees": [
-      { "fn": "Alice", "ln": "Smith", "when": "2026-02-01" },
-      { "fn": "Bob", "ln": "Brown", "when": "2026-02-02" }
-    ]
-  },
-  {
-    "event": "Mon event 48",
-    "start": "2028-09-10 15:00:00",
-    "end": "2028-09-10 19:00:00",
-    "max": 15,
-    "where": "48 boulevard truc - 75057 Paris",
-    "attendees": [
-      { "fn": "Charlie", "ln": "Johnson", "when": "2026-03-03" },
-      { "fn": "David", "ln": "Williams", "when": "2026-03-04" }
-    ]
-  },
-  {
-    "event": "Mon event 49",
-    "start": "2028-10-05 14:00:00",
-    "end": "2028-10-05 18:00:00",
-    "max": 25,
-    "where": "49 rue machin - 75058 Paris",
-    "attendees": [
-      { "fn": "Eva", "ln": "Green", "when": "2026-04-10" },
-      { "fn": "Frank", "ln": "Black", "when": "2026-04-11" }
-    ]
-  },
-  {
-    "event": "Mon event 50",
-    "start": "2028-11-10 17:00:00",
-    "end": "2028-11-10 21:00:00",
-    "max": 30,
-    "where": "50 avenue exemple - 75059 Paris",
-    "attendees": [
-      { "fn": "Grace", "ln": "Lee", "when": "2026-05-10" },
-      { "fn": "Hank", "ln": "Miller", "when": "2026-05-11" }
+      { "fn": "Camille", "ln": "Dubois", "when": "2025-01-15" },
+      { "fn": "Antoine", "ln": "Garnier", "when": "2025-01-18" }
     ]
   }
 ]
