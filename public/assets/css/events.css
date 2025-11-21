@@ -1,0 +1,111 @@
+.eventsCardSection {
+    padding: 40px;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.eventCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(145deg, #333333, #2a2a2a);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #e0e0e0;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #3a3a3a;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+        border-color: #4a4a4a;
+    }
+    
+    h3 {
+        color: #ffffff;
+        font-size: 1.4rem;
+        margin: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4a4a4a;
+        width: 100%;
+    }
+    
+    .event-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #b0b0b0;
+            
+            strong {
+                color: #d0d0d0;
+                min-width: 80px;
+            }
+        }
+    }
+    
+    .attendees-count {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #c0c0c0;
+        align-self: flex-start;
+    }
+    
+    .deleteEventButton {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        padding: 0;
+        background: linear-gradient(135deg, #d32f2f, #b71c1c);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background: linear-gradient(135deg, #e53935, #c62828);
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 6px 16px rgba(211, 47, 47, 0.6);
+        }
+        
+        &:active {
+            transform: scale(0.95) rotate(90deg);
+        }
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .eventsCardSection {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+

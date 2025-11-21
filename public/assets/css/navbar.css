@@ -1,18 +1,62 @@
-nav{
-    position: absolute;
+nav {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     top: 0;
+    left: 0;
     width: 100vw;
-    height: 50px;
-    background-color: #252525;
-    z-index: 1;
+    height: 60px;
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 
-    a{
-        color: white;
+    a {
+        position: relative;
+        color: #e0e0e0;
         text-decoration: none;
-        font-size: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6a6a6a, #5a5a5a);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        &:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.05);
+            
+            &::before {
+                width: 80%;
+            }
+        }
+        
+        &.active {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            
+            &::before {
+                width: 80%;
+            }
+        }
     }
+}
+
+/* Add padding to body to prevent content from hiding under fixed navbar */
+body {
+    padding-top: 60px;
 }
