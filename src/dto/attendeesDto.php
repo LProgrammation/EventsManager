@@ -1,6 +1,6 @@
 <?php 
-
-namespace src\dto ;
+        
+namespace Src\Dto;  
 
 class AttendeesDto {
     public $first_name;
@@ -11,8 +11,11 @@ class AttendeesDto {
         $this->last_name = $last_name;
         $this->registration_date = $registration_date;
     }
-
-    public function getAttendee() : array {
+    /**
+     * Get attendee as array
+     * @return array
+     */
+        public function getAttendee() : array {
         $attendee = [
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,

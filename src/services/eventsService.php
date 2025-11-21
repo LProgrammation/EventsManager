@@ -1,12 +1,10 @@
 <?php
 
-namespace src\services;
+namespace Src\Services;
 
-use src\dto\AttendeesDto;
-
-use src\dto\EventsDto;
-
-use src\services\AttendeesService ;
+use Src\Dto\AttendeesDto;
+use Src\Dto\EventsDto;
+use Src\Services\AttendeesService ;
 
 class EventsService
 {
@@ -15,38 +13,55 @@ class EventsService
     public function __construct(array $database)
     {
         $this->database = $database;
-        $this->eventsRepository = new \src\repositories\eventsRepository($this->database);
+        $this->eventsRepository = new \Src\Repositories\eventsRepository($this->database);
     }
-
+    /**
+     * Get all events from the database
+     * @return array
+     */
     public function getAllEvents(): array
     {
         return $this->eventsRepository->getEvents();
     }
-
-    public function getEventDetails($id): array
-    {
-        return $this->eventsRepository->getEventById($id);
-    }
-
-
+    /**
+     * Update event dates
+     * @param int $event_id
+     * @param string $new_start_date
+     * @param string $new_end_date
+     * @return void
+     */
     public function updateEventDates($event_id, $new_start_date, $new_end_date)
     {
-
         $this->eventsRepository->updateEventDates($event_id, $new_start_date, $new_end_date);
     }
-
+    /**
+     * Create event
+     * @param mixed $event_name
+     * @param mixed $event_location
+     * @param mixed $start_date
+     * @param mixed $end_date
+     * @param mixed $max_attendees
+     * @return int
+     */
     public function createEvent($event_name, $event_location, $start_date, $end_date, $max_attendees)
     {
         return $this->eventsRepository->createEvent($event_name, $event_location, $start_date, $end_date, $max_attendees);
     }
+    /**
+     * Delete event by id
+     * @param mixed $id
+     * @return void
+     */
     public function deleteEvent($id)
     {
         $this->eventsRepository->deleteEvent($id);
     }
-    
-    
-    
-    public function importEventFromSource(string $sourceName)
+    /**
+     * Import events from source name
+     * @param string $sourceName
+     * @return void
+     */
+    public function importEventsFromSourceName(string $sourceName)
     {
         $documents = $this->convertEventsDatasFromApi($sourceName);
         $attendeesService = new AttendeesService($this->database) ;
@@ -69,12 +84,15 @@ class EventsService
             }
         }
     }
-
+    /**
+     * Convert events data from API to internal format
+     * @param string $apiName
+     * @return array
+     */
     private function convertEventsDatasFromApi(string $apiName)
     {
         $eventsDatas = $this->eventsRepository->getApiEventsDatasByCollectionName($apiName);
         $documents = [];
-
         switch ($apiName) {
             case 'disisfine':
                 foreach ($eventsDatas as $event) {
@@ -95,10 +113,8 @@ class EventsService
                         );
                         $document['attendees'][] = $attendeeDto->getAttendee();
                     }
-
                     $documents[] = $document;
                 }
-
                 break;
             case 'liveticket':
                 foreach ($eventsDatas as $event) {
@@ -119,24 +135,17 @@ class EventsService
                         );
                         $document['attendees'][] = $attendeeDto->getAttendee();
                     }
-
                     $documents[] = $document;
                 }
-
                 break;
             case 'truegister':
-
                 foreach ($eventsDatas as $eventData) {
-
                     foreach ($eventData as $event) {
-                        // Skip the _id field
                         if ($event instanceof \MongoDB\BSON\ObjectId) {
                             continue;
                         }
-
                         $eventObj = $event['event'];
                         $attendeesObj = $event['attendees'];
-
                         $document = [];
                         $eventsDto = new EventsDto(
                             $eventObj['event_name'],
@@ -146,7 +155,6 @@ class EventsService
                             5
                         );
                         $document['event'] = $eventsDto->getEvent();
-
                         foreach ($attendeesObj as $event_attendee) {
                             $attendeeDto = new AttendeesDto(
                                 $event_attendee['attendee_1'],
@@ -155,22 +163,11 @@ class EventsService
                             );
                             $document['attendees'][] = $attendeeDto->getAttendee();
                         }
-
                         $documents[] = $document;
                     }
                 }
-                
                 break;
-                
-                
             }
         return $documents;
-
-
-
-
-
     }
-
-
 }

@@ -1,8 +1,14 @@
 <?php 
 
-namespace src\cores;
+namespace Src\cores;
 
 class Renderer {
+    /**
+     * Render a template with data
+     * @param string $template
+     * @param array $data
+     * @return void
+     */
     public static function render(string $template, array $data = []): void {
         $renderData = [
             'content' => $template . '.php',
@@ -14,7 +20,6 @@ class Renderer {
             'scripts' => $data['scripts'] ?? [],
             'head_scripts' => $data['head_scripts'] ?? []
         ];
-
         extract($renderData);
         include '../templates/index.php';
     }

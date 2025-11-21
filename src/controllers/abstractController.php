@@ -1,8 +1,8 @@
 <?php
 
-namespace src\controllers;
+namespace Src\Controllers;
 
-use src\cores\Renderer;
+use Src\cores\Renderer;
 abstract class AbstractController {
 
     protected array $database;

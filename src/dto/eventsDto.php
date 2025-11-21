@@ -1,6 +1,6 @@
 <?php 
 
-namespace src\dto ;
+namespace Src\Dto ;
 
 class EventsDto {
     public string $event_name ;
@@ -16,8 +16,10 @@ class EventsDto {
         $this->end_date = $end_date ;
         $this->max_attendees = $max_attendees ;
     }
-
-
+    /**
+     * Get event as array
+     * @return array
+     */
     public function getEvent() : array {
         $event = [
             'event_name' => $this->event_name ,

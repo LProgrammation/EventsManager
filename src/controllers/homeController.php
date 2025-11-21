@@ -1,14 +1,14 @@
 <?php 
 
-namespace src\controllers;
-use src\controllers\AbstractController;
+namespace Src\Controllers;
+use Src\Controllers\AbstractController;
 class HomeController extends AbstractController {
     public function __construct(array $database)
     {
         parent::__construct($database);
     }
     /**
-     * Show home page
+     * Home page
      * @return void
      */
     public function index(){

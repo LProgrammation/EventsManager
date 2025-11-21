@@ -1,6 +1,5 @@
 <h1>Events</h1>
 <section class="eventsCardSection">
-
     <?php foreach ($renderData['data']['events'] as $event): ?>
         <div class="eventCard">
             <h2><?= htmlspecialchars($event['name']) ?></h2>

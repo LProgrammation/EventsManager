@@ -1,6 +1,6 @@
 <?php
 
-namespace src\repositories;
+namespace Src\Repositories;
 class EventsRepository
 {
     private $pdo;
@@ -11,8 +11,6 @@ class EventsRepository
         $this->pdo = $database['mariadb'];
         $this->mongodb = $database['mongodb'];
     }
-
-
     /**
      * Get all events
      */
@@ -22,7 +20,6 @@ class EventsRepository
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-
     /**
      * Get event by id
      * @param mixed $id
@@ -49,7 +46,6 @@ class EventsRepository
         $stmt->bindParam(':new_end_date', $new_end_date, \PDO::PARAM_STR);
         $stmt->execute();
     }
-
     /**
      * Create event
      * @param mixed $event_name
@@ -83,7 +79,11 @@ class EventsRepository
         $stmt->bindParam(':event_id', $event_id, \PDO::PARAM_INT);
         $stmt->execute();
     }
-
+    /**
+     * Get events data from mongodb by collection name
+     * @param string $apiName
+     * @return array
+     */
     public function getApiEventsDatasByCollectionName(string $apiName){
         $collection = $this->mongodb->selectCollection($apiName);
         $documents = $collection->find()->toArray();

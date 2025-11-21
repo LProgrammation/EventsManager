@@ -1,7 +1,7 @@
 <?php
 
-namespace src\controllers;
-use src\controllers\AbstractController;
+namespace Src\Controllers;
+use Src\Controllers\AbstractController;
 class AttendeesController extends AbstractController
 {
     private $attendeesService;
@@ -10,8 +10,8 @@ class AttendeesController extends AbstractController
     public function __construct($database = null)
     {
         parent::__construct($database);
-        $this->attendeesService = new \src\services\AttendeesService($this->database);
-        $this->eventsService = new \src\services\EventsService($this->database);
+        $this->attendeesService = new \Src\Services\AttendeesService($this->database);
+        $this->eventsService = new \Src\Services\EventsService($this->database);
     }
     /**
      * Show register to event form
@@ -23,7 +23,7 @@ class AttendeesController extends AbstractController
         $this->render('events/registerAttendee', ['title' => 'Register to Events', 'events' => $events]);
     }
     /**
-     * Submit the register form values
+     * Submit the register to event form values
      * @return void
      */
     public function registerSubmit()
@@ -37,13 +37,19 @@ class AttendeesController extends AbstractController
         header('Location: /events');
         exit();
     }
-
+    /**
+     * Show unregister from event form
+     * @return void
+     */
     public function unregisterFromEvents()
     {
         $events = $this->eventsService->getAllEvents();
         $this->render('events/unregisterAttendee', ['title' => 'Unregister from Events', 'events' => $events]);
     }
-
+    /**
+     * Submit the unregister from event form values
+     * @return void
+     */
     public function unregisterSubmit()
     {
         $this->attendeesService->unregisterAttendeeFromEvent(

@@ -1,8 +1,8 @@
 <?php
 
 use Dotenv\Dotenv;
-use src\cores\DatabaseFactory;
-use src\cores\Router;
+use Src\cores\DatabaseFactory;
+use Src\cores\Router;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

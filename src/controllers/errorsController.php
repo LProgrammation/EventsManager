@@ -1,7 +1,7 @@
 <?php 
 
-namespace src\controllers;
-use src\controllers\AbstractController;
+namespace Src\Controllers;
+use Src\Controllers\AbstractController;
 class ErrorsController extends AbstractController {
 
     public function __construct($database = null)
@@ -9,8 +9,7 @@ class ErrorsController extends AbstractController {
         parent::__construct($database);
     }
     /**
-     * Show error with message
-     * @param mixed $errorCode
+     * Error page
      * @return void
      */
     public function index($errorCode){

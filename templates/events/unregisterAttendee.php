@@ -8,19 +8,12 @@
             </option>
         <?php endforeach; ?>
     </select>
-
     <br><br>
-
     <label for="first_name">Prénom :</label>
     <input type="text" id="first_name" name="first_name" required>
-
     <br><br>
-
     <label for="last_name">Nom :</label>
     <input type="text" id="last_name" name="last_name" required>
-
     <br><br>
-
-
     <button type="submit">Se désinscrire</button>
 </form>

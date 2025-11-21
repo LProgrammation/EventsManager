@@ -8,18 +8,12 @@
             </option>
         <?php endforeach; ?>
     </select>
-
     <br><br>
-
     <label for="new_start_date">Nouvelle date de début :</label>
     <input type="date" id="new_start_date" name="new_start_date" required>
-
     <br><br>
-
     <label for="new_end_date">Nouvelle date de fin :</label>
     <input type="date" id="new_end_date" name="new_end_date" required>
-
     <br><br>
-
     <button type="submit">Modifier</button>
 </form>

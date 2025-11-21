@@ -1,6 +1,6 @@
 <?php 
 
-namespace src\enums ; 
+namespace Src\Enums ; 
 
 class RoutesEnum {  
 
@@ -25,7 +25,6 @@ class RoutesEnum {
     ];
     /**
      * Return route by name
-     * @param mixed $routeName
      */
     public function getRoute($routeName) {
         return $this->routes[$routeName] ?? null;

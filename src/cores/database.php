@@ -1,16 +1,15 @@
 <?php 
 
-namespace src\cores;
+namespace Src\cores;
 
 class Database {
     private $dbName;
     private $type;
     private $connection;
-
+    
     public function __construct($dbName, $type = 'mysql') {
         $this->dbName = $dbName;
         $this->type = strtolower($type);
-
         if ($this->type === 'mysql' || $this->type === 'mariadb') {
             $host = $_ENV['DB_HOST'] ?? 'localhost';
             $user = $_ENV['DB_USER'] ?? 'root';
@@ -34,6 +33,10 @@ class Database {
         }
     }
 
+    /**
+     * Get database connection
+     * @return mixed
+     */
     public function getConnection() {
         return $this->connection;
     }
