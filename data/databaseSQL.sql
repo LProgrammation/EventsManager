@@ -143,7 +143,6 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Cannot unregister attendee: attendee not found for this event';
     END IF;
     DELETE FROM eventsAttendees WHERE first_name = p_first_name AND last_name = p_last_name AND event_id = p_event_id;
-    CALL decrementAttendeesCount(p_event_id);
 END //
 
 CREATE PROCEDURE updateEventDates(IN event_id INT, IN new_start_date DATE, IN new_end_date DATE)
@@ -168,5 +167,11 @@ BEGIN
   CALL incrementAttendeesCount(NEW.event_id);
 END //
 
+CREATE TRIGGER after_unregistration_delete
+AFTER DELETE ON eventsAttendees
+FOR EACH ROW
+BEGIN
+  CALL decrementAttendeesCount(OLD.event_id);
+END //
 
 DELIMITER ;
